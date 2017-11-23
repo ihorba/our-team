@@ -1,0 +1,216 @@
+@import "normalize.scss";
+@import "layout.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:400,900');
+
+$text-color: #333;
+$primary-color: #FFCC00;
+$body-font: 'Raleway', sans-serif;
+$header-font: Roboto, sans-serif;
+
+body{
+	font: 500 14px/1.7 $body-font;
+	color: $text-color;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	font: 700 14px/1.7 OpenSans, sans-serif;
+	height: 24px;
+	color:  #666666;
+	border: 1px solid $primary-color;
+	text-decoration: none;
+	padding: 0 12px 0;
+	max-width: 120px;
+	margin: 0 auto;
+
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+	background-color: $primary-color;
+	color: #FFF;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
+
+.ba-team {
+	padding: 110px 0;
+
+	&__suptitle {
+		font: 500 18px/1 $body-font;
+		color: #898f8f;
+		text-align: center;
+		letter-spacing: 0.02em;
+		margin: 0 0 10px;
+
+	}
+	&__title {
+		font: 900 60px/1 $header-font;
+		color: $primary-color;
+		text-align: center;
+		margin: 0 0 48px;
+		text-transform: uppercase;
+		position: relative;
+
+		&:after {
+			content: "";
+			display: block;
+			max-width: 450px;
+			margin: 50px auto 0;
+			height: 1px;
+			background: $primary-color;
+		}
+	}
+	&__title-icon {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		fill: $primary-color;
+		transform: translate(-50%, 50%);
+		background: #FFF;
+		box-shadow: 0 0 0 5px #fff;
+
+	}
+}
+
+.ba-crewman {
+	display: flex;
+	&__image-col {
+		flex-basis: 50%;
+		border-right: 1px solid $primary-color;
+		padding: 76px 80px 76px 68px;
+		display: flex;
+		align-items: center;
+	}
+	&__content-col {
+		flex-basis: 50%;
+		padding: 0 68px 0 80px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__image {
+		padding: 15px;
+		border: 1px solid $primary-color;
+		position: relative;
+
+		&:before, &:after {
+			content: "";
+			background: #FFF;
+			position: absolute;
+			z-index: 0;
+		}
+
+		&:before {
+			left: 25%;
+			right: 25%;
+			top: -2px;
+			bottom: -2px;
+		}
+
+		&:after {
+			left: -2px;
+			right: -2px;
+			top: 25%;
+			bottom: 25%;
+		}
+
+		img {
+			display: block;
+			border: inherit;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	&__name {
+		color:  #666666;
+		font: 900 36px/1 $header-font;
+		margin: 0 0 30px;
+
+		&:after {
+			content: "";
+			background-color: $primary-color;
+			width: 100px;
+			height: 1px;
+			margin: 34px auto 0;
+			display: block;
+
+		}
+	}
+	&__position {
+		font: 400 24px/1 $body-font;
+		color: #666666;
+		margin: 0 0 28px;
+	}
+	&__content {
+		background: url(../img/boxes.png) no-repeat 50% 100%;
+		padding-bottom: 5px;
+		margin-bottom: 26px;
+	}
+}
+.ba-socials {
+	a {
+		color: #ccc;
+		display: inline-block;
+		border-radius: 50%;
+		padding: 5px;
+		border: 2px solid currentColor;
+		width: 30px;
+		height: 30px;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	a + a {
+		margin-left: 5px;
+	}
+	svg {
+		fill: currentColor;
+		width: 100%;
+		height: 100%;
+
+	}
+}
